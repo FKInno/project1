@@ -1,0 +1,152 @@
+////////////////////////////////////////////////////////////
+//        Copyright (c)  
+//----------------------------------------------------------
+//    Routine: _0001_Par_Project
+//    Author:  Florian Krummrich Innovatherm
+//    Created: 12.09.2017
+//    Edited:  05.12.2017
+//    Revision: 1.2
+//----------------------------------------------------------
+//    Description:
+//        Only at First Scan! 
+//        Parameter Set for the Projekt
+//
+//----------------------------------------------------------
+//    History: 1.0    first draft
+//    1.1Add IP Address List
+//    1.2Quantity of Ramps
+//
+//
+//    
+//
+////////////////////////////////////////////////////////////
+
+
+//##########################################################
+//
+//    Furnace Design Specification 
+//
+//##########################################################
+
+PAR_Project.Furnace_No_Min := 5 ; // Minimum Furnace Number
+PAR_Project.Furnace_No_Max := 5 ; // Maximum Furnace Number
+PAR_Project.Qty_of_Flues := 9 ; // Quantity of Flues
+PAR_Project.Furnace[5].Qty_of_Sections := 68 ; // Quantity of Sections on Furnace
+PAR_Project.Furnace[5].Qty_of_Fires := 4 ; // Quantity of Fire on Furnace
+PAR_Project.Furnace[5].Furnace_No := 5 ; // Furnace Number
+PAR_Project.Furnace[5].ProBake_Furnace_No := 5 ; // Furnace Number Used by ProBake (normaly started by 1 )
+//Array Number refers to ramp typ number
+PAR_Project.Qty_of_Ramps[1] := 6 ; // EXH
+PAR_Project.Qty_of_Ramps[2] := 4 ; // MER
+PAR_Project.Qty_of_Ramps[3] := 12 ; // BUR
+PAR_Project.Qty_of_Ramps[4] := 4 ; // ZPR
+PAR_Project.Qty_of_Ramps[5] := 5 ; // CMC
+PAR_Project.Qty_of_Ramps[6] := 4 ; // CMU
+PAR_Project.Qty_of_Ramps[7] := 1 ; // GAS
+PAR_Project.Qty_of_Ramps[8] := 0 ; // AUX
+PAR_Project.DIT := 100 ; // DIT Version
+PAR_Project.Login_to_set_Section := 0 ; // Use Login to Set the Sectionnumber at the Startscreen
+PAR_Project.Qty_BUR := 3 ; // Maximum Quantity of Burner Ramps
+PAR_Project.Qty_CMC := 1 ; // Maximum Quantity of Controlled Cooler Ramps
+PAR_Project.Fire_Direction_Variable := 1 ; // 0 = Not Variable, 1 = Variable
+//PAR_Project.Fire_Direction := 0 ; // 0 = Count up, 1 = Count Down
+PAR_Project.Com_Ramp.Com_RetryTimeout := 1500 ; // Timeout to retry a new Message
+PAR_Project.Com_Ramp.Com_Delay := 500 ; // Delay between Messages
+PAR_Project.Com_Ramp.Com_Watchdog_MinCyleCount := 3 ; // Minimum Communication Cycles bevor accpect Values
+PAR_Project.Com_Ramp.Com_Watchdog_Timeout := 60000 ; // Time out for Communication Watchdog
+PAR_Project.Com_ProBake.Com_RetryTimeout := 1500 ; // Timeout to retry a new Message
+PAR_Project.Com_ProBake.Com_Delay := 500 ; // Delay between Messages
+PAR_Project.Com_ProBake.Com_Watchdog_MinCyleCount := 3 ; // Minimum Communication Cycles bevor accpect Values
+PAR_Project.Com_ProBake.Com_Watchdog_Timeout := 60000 ; // Time out for Communication Watchdog
+PAR_Project.DistanceMin[2] := 1 ; // Min Section Distance MER
+PAR_Project.DistanceMax[2] := 3 ; // Max Section Distance MER
+PAR_Project.DistanceMin[3] := 1 ; // Min Section Distance BUR
+PAR_Project.DistanceMax[3] := 7 ; // Max Section Distance BUR
+PAR_Project.DistanceMin[4] := 4 ; // Min Section Distance ZPR
+PAR_Project.DistanceMax[4] := 10 ; // Max Section Distance ZPR
+PAR_Project.DistanceMin[5] := 5 ; // Min Section Distance CMC
+PAR_Project.DistanceMax[5] := 13 ; // Max Section Distance CMC
+
+
+//##########################################################
+//
+//    IP Address List
+//        AAA.BBB.CCC.DDD = 16#AA.BB.CC.DD
+//##########################################################
+
+PAR_Project.IP_Address_List[1].RampNr[1].IP := 16#C0A8011F ; // EXH 01 192.168.1.31
+PAR_Project.IP_Address_List[1].RampNr[2].IP := 16#C0A80123 ; // EXH 02 192.168.1.35
+PAR_Project.IP_Address_List[1].RampNr[3].IP := 16#C0A80127 ; // EXH 03 192.168.1.39
+PAR_Project.IP_Address_List[1].RampNr[4].IP := 16#C0A8012B ; // EXH 04 192.168.1.43
+PAR_Project.IP_Address_List[1].RampNr[5].IP := 16#C0A8012F ; // EXH 05 192.168.1.47
+PAR_Project.IP_Address_List[1].RampNr[6].IP := 16#C0A80133 ; // EXH 06 192.168.1.51
+
+PAR_Project.IP_Address_List[2].RampNr[1].IP := 16#C0A8013D ; // MER 01 192.168.1.61
+PAR_Project.IP_Address_List[2].RampNr[2].IP := 16#C0A80140 ; // MER 02 192.168.1.64
+PAR_Project.IP_Address_List[2].RampNr[3].IP := 16#C0A80143 ; // MER 03 192.168.1.67
+PAR_Project.IP_Address_List[2].RampNr[4].IP := 16#C0A80146 ; // MER 04 192.168.1.70
+
+PAR_Project.IP_Address_List[3].RampNr[1].IP := 16#C0A80151 ; // BUR 01 192.168.1.81
+PAR_Project.IP_Address_List[3].RampNr[2].IP := 16#C0A80155 ; // BUR 02 192.168.1.85
+PAR_Project.IP_Address_List[3].RampNr[3].IP := 16#C0A80159 ; // BUR 03 192.168.1.89
+PAR_Project.IP_Address_List[3].RampNr[4].IP := 16#C0A8015D ; // BUR 04 192.168.1.93
+PAR_Project.IP_Address_List[3].RampNr[5].IP := 16#C0A80161 ; // BUR 05 192.168.1.97
+PAR_Project.IP_Address_List[3].RampNr[6].IP := 16#C0A80165 ; // BUR 06 192.168.1.101
+PAR_Project.IP_Address_List[3].RampNr[7].IP := 16#C0A80169 ; // BUR 07 192.168.1.105
+PAR_Project.IP_Address_List[3].RampNr[8].IP := 16#C0A8016D ; // BUR 08 192.168.1.109
+PAR_Project.IP_Address_List[3].RampNr[9].IP := 16#C0A80171 ; // BUR 09 192.168.1.113
+PAR_Project.IP_Address_List[3].RampNr[10].IP := 16#C0A80175 ; // BUR 10 192.168.1.117
+PAR_Project.IP_Address_List[3].RampNr[11].IP := 16#C0A80179 ; // BUR 11 192.168.1.121
+PAR_Project.IP_Address_List[3].RampNr[12].IP := 16#C0A8017D ; // BUR 12 192.168.1.125
+
+PAR_Project.IP_Address_List[4].RampNr[1].IP := 16#C0A8018D ; // ZPR 01 192.168.1.141
+PAR_Project.IP_Address_List[4].RampNr[2].IP := 16#C0A80190 ; // ZPR 02 192.168.1.144
+PAR_Project.IP_Address_List[4].RampNr[3].IP := 16#C0A80193 ; // ZPR 03 192.168.1.147
+PAR_Project.IP_Address_List[4].RampNr[4].IP := 16#C0A80196 ; // ZPR 04 192.168.1.150
+
+PAR_Project.IP_Address_List[5].RampNr[1].IP := 16#C0A801A1 ; // CMC 01 192.168.1.161
+PAR_Project.IP_Address_List[5].RampNr[2].IP := 16#C0A801A4 ; // CMC 02 192.168.1.164
+PAR_Project.IP_Address_List[5].RampNr[3].IP := 16#C0A801A7 ; // CMC 03 192.168.1.167
+PAR_Project.IP_Address_List[5].RampNr[4].IP := 16#C0A801AA ; // CMC 04 192.168.1.170
+PAR_Project.IP_Address_List[5].RampNr[5].IP := 16#C0A801AD ; // CMC 05 192.168.1.173
+
+PAR_Project.IP_Address_List[0].RampNr[1].IP := 16#C0A80115 ; // GAS 192.168.1.21
+
+PAR_Project.IP_Address_List[1].RampNr[1].PLC_Type := 1 ; // EXH 01 1 = L33ER
+PAR_Project.IP_Address_List[1].RampNr[2].PLC_Type := 1 ; // EXH 02 1 = L33ER
+PAR_Project.IP_Address_List[1].RampNr[3].PLC_Type := 1 ; // EXH 03 1 = L33ER
+PAR_Project.IP_Address_List[1].RampNr[4].PLC_Type := 1 ; // EXH 04 1 = L33ER
+PAR_Project.IP_Address_List[1].RampNr[5].PLC_Type := 1 ; // EXH 05 1 = L33ER
+PAR_Project.IP_Address_List[1].RampNr[6].PLC_Type := 1 ; // EXH 06 1 = L33ER
+
+PAR_Project.IP_Address_List[2].RampNr[1].PLC_Type := 1 ; // MER 01 1 = L33ER
+PAR_Project.IP_Address_List[2].RampNr[2].PLC_Type := 1 ; // MER 02 1 = L33ER
+PAR_Project.IP_Address_List[2].RampNr[3].PLC_Type := 1 ; // MER 03 1 = L33ER
+PAR_Project.IP_Address_List[2].RampNr[4].PLC_Type := 1 ; // MER 04 1 = L33ER
+
+PAR_Project.IP_Address_List[3].RampNr[1].PLC_Type := 1 ; // BUR 01 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[2].PLC_Type := 1 ; // BUR 02 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[3].PLC_Type := 1 ; // BUR 03 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[4].PLC_Type := 1 ; // BUR 04 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[5].PLC_Type := 1 ; // BUR 05 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[6].PLC_Type := 1 ; // BUR 06 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[7].PLC_Type := 1 ; // BUR 07 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[8].PLC_Type := 1 ; // BUR 08 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[9].PLC_Type := 1 ; // BUR 09 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[10].PLC_Type := 1 ; // BUR 10 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[11].PLC_Type := 1 ; // BUR 11 1 = L33ER
+PAR_Project.IP_Address_List[3].RampNr[12].PLC_Type := 1 ; // BUR 12 1 = L33ER
+
+PAR_Project.IP_Address_List[4].RampNr[1].PLC_Type := 1 ; // ZPR 01 1 = L33ER
+PAR_Project.IP_Address_List[4].RampNr[2].PLC_Type := 1 ; // ZPR 02 1 = L33ER
+PAR_Project.IP_Address_List[4].RampNr[3].PLC_Type := 1 ; // ZPR 03 1 = L33ER
+PAR_Project.IP_Address_List[4].RampNr[4].PLC_Type := 1 ; // ZPR 04 1 = L33ER
+
+PAR_Project.IP_Address_List[5].RampNr[1].PLC_Type := 1 ; // CMC 01 1 = L33ER
+PAR_Project.IP_Address_List[5].RampNr[2].PLC_Type := 1 ; // CMC 02 1 = L33ER
+PAR_Project.IP_Address_List[5].RampNr[3].PLC_Type := 1 ; // CMC 03 1 = L33ER
+PAR_Project.IP_Address_List[5].RampNr[4].PLC_Type := 1 ; // CMC 04 1 = L33ER
+PAR_Project.IP_Address_List[5].RampNr[5].PLC_Type := 1 ; // CMC 05 1 = L33ER
+
+PAR_Project.IP_Address_List[0].RampNr[1].PLC_Type := 1 ; // GAS 1 = L33ER
+
